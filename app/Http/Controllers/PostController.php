@@ -62,7 +62,7 @@ class PostController extends Controller
             "title" => $request->title,
             "description" => $request->description,
             ]);
-            if($post->img != "" ){
+            if($request->file("img") == "" ){
              
             }else{
                  $post->update([
