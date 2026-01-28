@@ -21,6 +21,5 @@ Route::delete("/post/submit/{post}",[PostController::class,"destroy"])->name("de
 Route::get("/profile/index", [ProfileController::class, "index"])->name("index_profile");
 Route::get("/profile/create", [ProfileController::class, "create"])->name("create_profile");
 Route::post("/profile/store", [ProfileController::class, "store"])->name("store_profile");
-Route::get("/profile/edit/{profile}", [ProfileController::class, "edit"])->name("profile_edit");
 
 

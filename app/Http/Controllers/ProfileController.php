@@ -22,7 +22,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view("profiles.create");
+        $profile=Profile::all();
+        return view("profiles.create", compact("profile"));
     }
 
     /**
@@ -30,7 +31,13 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-       
+        $profile=Profile::create([
+            "name"=>$request->name,
+            "surname"=>$request->surname,
+            "region"=>$request->region,
+            "user_id"=> Auth::user()->id,
+        ]);
+       return redirect(route("index_profile"));
     }
 
     /**
@@ -38,7 +45,7 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        // 
+        return view("profiles.show", compact("profile"));
     }
 
     /**
@@ -46,7 +53,7 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        return view ("profiles.edit", compact("profile"));
+        // 
     }
 
     /**
@@ -54,7 +61,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        //
+        // 
     }
 
     /**
