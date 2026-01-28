@@ -1,5 +1,5 @@
 <x-layout>
-    <header class="container-fluid ">
+    <header class="container">
         <section class="row ">
             <article class="col-12 ">
                 <h1 class=" text-center justify-content-center display-2 lead">Login</h1>
@@ -8,13 +8,11 @@
     </header>
 
 
-    <main class="container-fluid">
+    <main class="container">
         <section class="row justify-content-center align-items-center">
             <article class="col-12 col-md-8">
                 <form method="POST" action="{{route('login')}}">
                     @csrf
-
-
                         <label for="email" class="form-label"><strong>Email</strong></label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
                     </div>

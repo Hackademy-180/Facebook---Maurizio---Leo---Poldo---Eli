@@ -39,7 +39,7 @@
           </ul>
         </li>
         @else
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown mx-5">
           <a class="nav-link dropdown-toggle" href="#"
              data-bs-toggle="dropdown">
             Utente
