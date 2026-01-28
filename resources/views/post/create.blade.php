@@ -7,7 +7,6 @@
                     <form method="POST" action="{{ route('store_post') }}" enctype="multipart/form-data">
                         @csrf
 
-                        {{-- Titolo --}}
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
                             <input type="text" name="title" id="title" class="form-control"  value="" required>

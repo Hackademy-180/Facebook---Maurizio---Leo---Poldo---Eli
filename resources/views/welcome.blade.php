@@ -10,8 +10,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p class="card-text">{{ $post->description }}</p>
-
-                        <img src="{{ asset('storage/' . $post->img) }}" class="img-fluid rounded mb-2" >
+                    <img src="{{ asset('storage/' . $post->img) }}" class="img-fluid rounded mb-2" >
                 </div>
             </div>
         @endforeach
