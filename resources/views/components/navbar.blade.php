@@ -35,6 +35,10 @@
                 @csrf
                 <button class="dropdown-item" type="submit">Logout</button>
               </form>
+               <form action="{{route("index_profile")}}" method="GET">
+                @csrf
+                <button class="dropdown-item" type="submit">Profilo</button>
+              </form>
             </li>
           </ul>
         </li>
@@ -50,6 +54,8 @@
           </ul>
         </li>
         @endauth
+
+        
 
       </ul>
     </div>
