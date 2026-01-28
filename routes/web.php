@@ -14,7 +14,7 @@ Route::post('/post/store',[PostController::class,'store'])->name('store_post');
 Route::get("/post/show/{post}",[PostController::class,"show"])->name("show_post");
 Route::get("/post/edit/{post}",[PostController::class,"edit"])->name("edit_post");
 Route::put("/post/update/{post}",[PostController::class,"update"])->name("update_post");
-Route::delete("/post/delete/{post}",[PostController::class,"destroy"])->name("delete_post");
+Route::delete("/post/submit/{post}",[PostController::class,"destroy"])->name("delete_post");
 
 // rotta profilo
 
