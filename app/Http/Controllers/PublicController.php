@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function home() {
-    return view('welcome');
+    $posts= Post::all();
+    return view('welcome',compact("posts"));
 }
 }

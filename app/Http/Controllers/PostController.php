@@ -21,7 +21,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post= Post::create([
+            "title"=>$request->title,
+            "description"=>$request->description,
+            "img"=>$request->file("img")->store("image","public"),
+            "user_id"=>Auth::user()->id
+        ]);
+        return redirect(route("home"));
     }
 
     /**
@@ -29,7 +35,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        
     }
 
     /**
