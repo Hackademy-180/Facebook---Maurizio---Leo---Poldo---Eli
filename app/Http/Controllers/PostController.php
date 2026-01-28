@@ -8,13 +8,18 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+
+    public function index()
+    {
+        return view('home', compact('posts'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-         return view("post.create");
-        
+        return view("post.create");
     }
 
     /**
@@ -22,11 +27,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post= Post::create([
-            "title"=>$request->title,
-            "description"=>$request->description,
+        $post = Post::create([
+            "title" => $request->title,
+            "description" => $request->description,
             "img" => $request->hasFile('img') ? $request->file('img')->store('image', 'public') : null,
-            "user_id"=>Auth::user()->id
+            "user_id" => Auth::user()->id
         ]);
 
         return redirect(route("home"));
@@ -37,7 +42,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-         return view("post.show",compact("post"));  
+        return view("post.show", compact("post"));
     }
 
     /**
@@ -45,7 +50,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view("post.edit",compact("post"));  
+        return view("post.edit", compact("post"));
     }
 
     /**
@@ -54,9 +59,9 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->update([
-            "title"=>$request->title,
-            "description"=>$request->description,
-            "img"=>$request->file("img")->store("image","public")
+            "title" => $request->title,
+            "description" => $request->description,
+            "img" => $request->file("img")->store("image", "public")
         ]);
         return redirect("home");
     }
@@ -68,6 +73,5 @@ class PostController extends Controller
     {
         $post->delete();
         return redirect("home");
-        
     }
 }
