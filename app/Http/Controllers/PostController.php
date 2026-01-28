@@ -25,9 +25,10 @@ class PostController extends Controller
         $post= Post::create([
             "title"=>$request->title,
             "description"=>$request->description,
-            "img"=>$request->file("img")->store("image","public"),
+            "img" => $request->hasFile('img') ? $request->file('img')->store('image', 'public') : null,
             "user_id"=>Auth::user()->id
         ]);
+
         return redirect(route("home"));
     }
 
@@ -36,7 +37,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('post.show', compact('post'));
+         return view("post.show",compact("post"));  
     }
 
     /**
@@ -44,7 +45,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view("post.edit",compact("post"));  
     }
 
     /**
@@ -52,7 +53,12 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->update([
+            "title"=>$request->title,
+            "description"=>$request->description,
+            "img"=>$request->file("img")->store("image","public")
+        ]);
+        return redirect("home");
     }
 
     /**
@@ -60,6 +66,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect("home");
+        
     }
 }
