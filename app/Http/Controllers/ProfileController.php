@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -12,7 +13,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        return view ("profiles.index");
     }
 
     /**
@@ -20,7 +21,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view("profiles.create");
     }
 
     /**
@@ -28,7 +29,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**
@@ -36,7 +37,7 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        //
+        // 
     }
 
     /**
