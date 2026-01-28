@@ -12,6 +12,12 @@
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p class="card-text">{{ $post->description }}</p>
                     <img src="{{ asset('storage/' . $post->img) }}" class="img-fluid rounded mb-2" >
+                    <a class="btn btn-custom" href="{{route("edit_post",compact("post"))}}">Modifica post</a>
+                <form method="POST" action="{{route("delete_post",compact("post"))}}">
+                    @csrf
+                    @method("delete")
+                    <button type="submit" class="btn btn-delete">Elimina post</button>
+                </form>
                 </div>
             </div>
         @endforeach
