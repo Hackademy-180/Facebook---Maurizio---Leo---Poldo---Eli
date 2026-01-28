@@ -13,7 +13,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view ("profiles.index");
+        $profile=Profile::all();
+        return view ("profiles.index", compact("profile"));
     }
 
     /**
@@ -45,7 +46,7 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        //
+        return view ("profiles.edit", compact("profile"));
     }
 
     /**
