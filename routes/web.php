@@ -13,5 +13,6 @@ Route::post("/post/submit/{post}",[PostController::class,"show"])->name("show_po
 Route::get("/post/edit/{post}",[PostController::class,"edit"])->name("edit_post");
 Route::put("/post/update/{post}",[PostController::class,"update"])->name("update_post");
 Route::delete("/post/delete/{post}",[PostController::class,"delete"])->name("delete_post");
+Route::post('/post/store', [PostController::class, 'store'])->name('store_post');
 
 
