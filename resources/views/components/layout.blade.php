@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facebook</title>
     <script src="https://kit.fontawesome.com/cf222a42b2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
@@ -13,6 +14,12 @@
     <x-navbar />
     {{$slot}}
 
-
+ <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+  <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

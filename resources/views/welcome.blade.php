@@ -7,7 +7,7 @@
         @endauth
 
         @foreach($posts as $post)
-            <div class="card shadow-sm mb-3" style="border-radius: 10px;">
+            <div class="card shadow-sm mb-3" data-aos="fade-right" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p class="card-text">{{ $post->description }}</p>
