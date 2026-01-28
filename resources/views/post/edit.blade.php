@@ -4,17 +4,17 @@
             <div class="card shadow-sm mb-4">
                 <div class="card-header">Crea un nuovo post</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('store_post') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('update_post',compact("post")) }}" enctype="multipart/form-data">
                         @csrf
-
+                        @method("put")
                         <div class="mb-3">
-                            <label for="title" class="form-label">Titolo</label>
-                            <input type="text" name="title" id="title" class="form-control"  value="" required>
+                            <label for="title" class="form-label">Nuovo titolo</label>
+                            <input type="text" name="title" id="title" value="{{$post->title}}" class="form-control"  value="" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="description" class="form-label">Descrizione</label>
-                            <textarea name="description"  id="description" rows="4" class="form-control" required ></textarea>
+                            <label for="description" class="form-label">nuova descrizione</label>
+                            <textarea name="description"  id="description" rows="4" class="form-control" required >{{$post->description}}</textarea>
                  
                         </div>
 
@@ -24,7 +24,7 @@
                   
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Pubblica</button>
+                        <button type="submit" class="btn btn-primary">Modifica</button>
                     </form>
                 </div>
             </div>

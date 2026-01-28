@@ -63,7 +63,7 @@ class PostController extends Controller
             "description" => $request->description,
             "img" => $request->file("img")->store("image", "public")
         ]);
-        return redirect("home");
+        return redirect(route("home"));
     }
 
     /**
