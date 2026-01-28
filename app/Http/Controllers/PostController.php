@@ -61,8 +61,14 @@ class PostController extends Controller
         $post->update([
             "title" => $request->title,
             "description" => $request->description,
-            "img" => $request->file("img")->store("image", "public")
-        ]);
+            ]);
+            if($post->img != "" ){
+             
+            }else{
+                 $post->update([
+                 "img" => $request->file("img")->store("image", "public")
+                 ]); 
+            };
         return redirect(route("home"));
     }
 
