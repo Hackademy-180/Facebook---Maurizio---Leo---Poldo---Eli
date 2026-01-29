@@ -3,13 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicController;
-<<<<<<< HEAD
 use App\Http\Controllers\NewsletterController;
-
-=======
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
->>>>>>> 7da2ad67b5de63da87329d77217ddad945e2791f
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
