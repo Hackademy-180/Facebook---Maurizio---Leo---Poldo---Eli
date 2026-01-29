@@ -1,11 +1,13 @@
 <x-layout>
     
     <main class="container">
-        <section class="row">
+        <section class="row justify-content-center">
             <article class="col-12">
-                <h1 class="text-center">Crea il tuo Profilo</h1>
+                <h1 class="text-center display-2 lead">Crea il tuo Profilo</h1>
             </article>
-            <article class="col-12">
+            <article class="col-12 article-custom">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
                 <form action="{{route("store_profile")}}" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -24,8 +26,10 @@
                         
                     </div>
                   
-                   <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-custom-1">Crea</button>
                 </form>
+                    </div>
+                </div>
             </article>
         </section>
         

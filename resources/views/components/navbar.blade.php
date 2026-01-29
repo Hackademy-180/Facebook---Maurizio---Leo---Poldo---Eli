@@ -8,7 +8,7 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search"
                placeholder="Cerca su Facebook">
-        <button class="btn btn-light" type="submit">Cerca</button>
+        <button class="btn btn-light search-btn" type="submit">Cerca</button>
       </form>
     </div>
 
@@ -36,7 +36,7 @@
                 <button class="dropdown-item" type="submit">Logout</button>
               </form>
                
-                <a href="{{route("index_profile")}}" class="dropdown-item">Profilo</a>
+                <a href="{{route("index_profile")}}" class="list-group-item list-group-item-action py-3 px-3">Profilo</a>
              
             </li>
           </ul>

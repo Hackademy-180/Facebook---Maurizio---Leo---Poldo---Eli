@@ -15,7 +15,7 @@
 button:hover {
   background: #315cfd;
   color: white;
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
 }
 
 /* Elimina post */
@@ -155,3 +155,51 @@ footer .form-control {
     min-width: 200px;
 }
 
+/* post show */
+
+.img-custom{
+  width: 1000px;
+}
+
+/* edit-post */
+
+.edit-post{
+  width: 600px;
+}
+
+/* post */
+
+
+
+/* article-profile */
+
+.article-custom{
+  width: 600px;
+}
+
+
+
+/* navbar tasto cerca */
+
+.search-btn{
+  width: 80px;
+  height:38px;
+}
+
+
+.sidebar-left{
+  
+    height: 270px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.sidebar-right {
+    border-right: none;
+    border-left: 1px solid #ddd;
+}
+
+.nav-link-custom:hover{
+  transform: translate(1px , 1px);
+}

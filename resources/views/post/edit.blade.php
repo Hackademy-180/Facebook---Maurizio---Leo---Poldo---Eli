@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 edit-post">
             <div class="card shadow-sm mb-4">
-                <div class="card-header">Crea un nuovo post</div>
+                <div class="card-header">Modifica il post</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('update_post',compact("post")) }}" enctype="multipart/form-data">
                         @csrf
@@ -24,7 +24,7 @@
                   
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Modifica</button>
+                        <button type="submit" class="btn btn-primary btn-custom-1">Modifica</button>
                     </form>
                 </div>
             </div>
