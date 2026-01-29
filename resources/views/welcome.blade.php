@@ -1,5 +1,4 @@
 <x-layout>
-<<<<<<< HEAD
     <main class="container d-flex justify-content-center my-3 ">
         <section class="row flex-column">
             @foreach($posts as $post)
@@ -22,9 +21,7 @@
                 </div>
             </div>
         @endforeach
-=======
 <main class="container-fluid my-3">
->>>>>>> f663e0c4c4ea13b25aa86b96ef9d3906b6d0bf39
 
     <div class="row">
 
