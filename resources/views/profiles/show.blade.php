@@ -10,9 +10,11 @@
                 <h1 class="text-center">Dettaglio Profilo</h1>
             </article>
             <article class="col-12">
-                <h2>Nome:{{$profile->name}}</h2>
-                <h2>Cognome:{{$profile->surname}}</h2>
-                <h2>Regione:{{$profile->region}}</h2>
+                <h2>Nome:</h2><p>{{$profile->name}}</p>
+                <h2>Cognome:</h2><p>{{$profile->surname}}</p>
+                <h2>Regione:</h2><p>{{$profile->region}}</p>
+                <h2>Biografia:</h2><p>{{$profile->bio}}</p>
+                
             </article>
             <a href="{{route("edit_profile", compact("profile"))}}" class="btn btn-warning">Modifica</a>
         </section>
