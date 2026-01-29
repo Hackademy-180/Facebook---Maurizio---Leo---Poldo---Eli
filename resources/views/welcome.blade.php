@@ -31,9 +31,9 @@
             <div class="pt-3 position-sticky top-0">
                 <ul class="nav flex-column gap-2">
                     <li><a href="{{route('home')}}" class="nav-link nav-link-custom">🏠 Home</a></li>
-                    @auth
-                    <li><a href="{{route('show_profile', ["profile"=>Auth::user()->profile->id])}}" class="nav-link nav-link-custom">👤 Profilo</a></li>
-                    @endauth
+                    {{-- @if(Auth::user()->profile() != "")
+                    <a href="{{route("show_profile", ["profile"=>Auth::user()->profile->id])}}" class="list-group-item list-group-item-action py-3 px-3">Visualizza Profilo</a>
+                    @endif --}}
                     <li><a href="#" class="nav-link nav-link-custom">👥 Amici</a></li>
                     <li><a href="#" class="nav-link nav-link-custom">📅 Eventi</a></li>
                     <li><a href="#" class="nav-link nav-link-custom">⚙️ Impostazioni</a></li>

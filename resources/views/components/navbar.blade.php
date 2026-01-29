@@ -36,11 +36,11 @@
                 <button class="dropdown-item" type="submit">Logout</button>
               </form>
               
-              @if(Auth::user()->profile())
+              {{-- @if(Auth::user()->profile() !="")
                 <a href="{{route("show_profile", ["profile"=>Auth::user()->profile->id])}}" class="list-group-item list-group-item-action py-3 px-3">Visualizza Profilo</a>
              @else
-             <a href="">Crea profilo</a>
-             @endif
+             <a href="">Crea profilo</a> --}}
+             {{-- @endif --}}
             </li>
           </ul>
         </li>
