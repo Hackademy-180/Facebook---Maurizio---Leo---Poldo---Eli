@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\NewsletterController;
+
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -22,4 +24,6 @@ Route::get("/profile/index", [ProfileController::class, "index"])->name("index_p
 Route::get("/profile/create", [ProfileController::class, "create"])->name("create_profile");
 Route::post("/profile/store", [ProfileController::class, "store"])->name("store_profile");
 
+//rotta newsletter del  footer
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 

@@ -135,3 +135,23 @@ button:active .icon svg {
 .card-custom{
   width: 500px;
 }
+
+/* footer */
+footer {
+    background-color: #f0f2f5;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+footer .form-control {
+    min-width: 200px;
+}
+
