@@ -23,6 +23,11 @@
                         <input type="text" class="form-control" id="region" aria-describedby="emailHelp" name="region" value="{{$profile->region}}">
                         
                     </div>
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Nuova Biografia</label>
+                       <textarea name="bio" id="bio" cols="30" rows="10" class="form-control">{{$profile->bio}}</textarea>
+                        
+                    </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

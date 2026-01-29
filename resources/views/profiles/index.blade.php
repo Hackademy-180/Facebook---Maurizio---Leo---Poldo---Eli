@@ -20,9 +20,14 @@
                         <input type="text" class="form-control" id="surname" aria-describedby="emailHelp" name="surname">
                         
                     </div>
-                      <div class="mb-3">
+                    <div class="mb-3">
                         <label for="region" class="form-label">Regione</label>
                         <input type="text" class="form-control" id="region" aria-describedby="emailHelp" name="region">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Biografia</label>
+                       <textarea name="bio" id="bio" cols="30" rows="10" class="form-control"></textarea>
                         
                     </div>
                   

@@ -35,6 +35,7 @@ class ProfileController extends Controller
             "name"=>$request->name,
             "surname"=>$request->surname,
             "region"=>$request->region,
+            "bio"=>$request->bio,
             "user_id"=> Auth::user()->id,
         ]);
        return redirect(route("show_profile", compact("profile")));
@@ -65,6 +66,7 @@ class ProfileController extends Controller
             "name"=>$request->name,
             "surname"=>$request->surname,
             "region"=>$request->region,
+            "bio"=>$request->bio,
             "user_id"=>Auth::user()->id,
         ]);
 
