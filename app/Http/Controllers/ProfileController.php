@@ -37,7 +37,7 @@ class ProfileController extends Controller
             "region"=>$request->region,
             "user_id"=> Auth::user()->id,
         ]);
-       return redirect(route("index_profile"));
+       return redirect(route("show_profile", compact("profile")));
     }
 
     /**
@@ -53,7 +53,7 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        // 
+        return view("profiles.edit", compact("profile"));
     }
 
     /**
@@ -61,7 +61,14 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        // 
+        $profile->update([
+            "name"=>$request->name,
+            "surname"=>$request->surname,
+            "region"=>$request->region,
+            "user_id"=>Auth::user()->id,
+        ]);
+
+        return redirect(route("show_profile", compact("profile")))->with("status", "Profilo modificato correttamente!");
     }
 
     /**
