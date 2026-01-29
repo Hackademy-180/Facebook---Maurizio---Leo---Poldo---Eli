@@ -36,7 +36,7 @@
                 <button class="dropdown-item" type="submit">Logout</button>
               </form>
                
-                <a href="{{route("index_profile")}}">Profilo</a>
+                <a href="{{route("index_profile")}}" class="dropdown-item">Profilo</a>
              
             </li>
           </ul>
