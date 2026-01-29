@@ -17,6 +17,7 @@
                 
             </article>
             <a href="{{route("edit_profile", compact("profile"))}}" class="btn btn-warning">Modifica</a>
+            <a href="/" class="btn btn-primary mt-3">Torna alla home</a>
         </section>
     </main>
 </x-layout>

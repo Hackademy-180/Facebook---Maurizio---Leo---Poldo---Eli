@@ -35,9 +35,12 @@
                 @csrf
                 <button class="dropdown-item" type="submit">Logout</button>
               </form>
-               
-                <a href="{{route("index_profile")}}" class="list-group-item list-group-item-action py-3 px-3">Profilo</a>
-             
+              
+              @if(Auth::user()->profile())
+                <a href="{{route("show_profile", ["profile"=>Auth::user()->profile->id])}}" class="list-group-item list-group-item-action py-3 px-3">Visualizza Profilo</a>
+             @else
+             <a href="">Crea profilo</a>
+             @endif
             </li>
           </ul>
         </li>
