@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+
 use Illuminate\Http\Request;
  
 
 class PublicController extends Controller
 {
-    public function home() {
+    public function home( ) {
+    
     $posts= Post::all();
     return view('welcome',compact("posts"));
 }

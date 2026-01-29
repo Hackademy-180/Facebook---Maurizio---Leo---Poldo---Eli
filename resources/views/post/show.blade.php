@@ -5,6 +5,9 @@
             <article class="col-12 col-md-8 ms-2">
                 <p>{{$post->description}}</p>
                <img src="{{ asset('storage/' . $post->img) }}" alt="">
+              @foreach ($post->comments as $comment)
+              {{$comment->description}}    
+              @endforeach 
             </article>
         </section>
     </main>
