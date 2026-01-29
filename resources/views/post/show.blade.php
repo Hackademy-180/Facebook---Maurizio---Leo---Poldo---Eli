@@ -4,7 +4,7 @@
         <section class="row">
             <article class="col-12 col-md-8 ms-2">
                 <p>{{$post->description}}</p>
-               <img src="{{ asset('storage/' . $post->img) }}" alt="">
+               <img src="{{ asset('storage/' . $post->img) }}" alt="" class="img-custom">
             </article>
         </section>
     </main>
