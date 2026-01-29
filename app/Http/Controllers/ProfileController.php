@@ -37,7 +37,7 @@ class ProfileController extends Controller
             "region"=>$request->region,
             "user_id"=> Auth::user()->id,
         ]);
-       return redirect(route("index_profile"));
+       return redirect(route("show_profile", compact("profile")));
     }
 
     /**
