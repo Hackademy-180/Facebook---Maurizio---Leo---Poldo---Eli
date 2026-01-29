@@ -30,5 +30,8 @@ Route::delete("/comments/submit/{comment}",[CommentController::class,"destroy"])
 Route::get("/profile/index", [ProfileController::class, "index"])->name("index_profile");
 Route::get("/profile/create", [ProfileController::class, "create"])->name("create_profile");
 Route::post("/profile/store", [ProfileController::class, "store"])->name("store_profile");
+Route::get("/profile/show/{profile}", [ProfileController::class, "show"])->name("show_profile");
+Route::get("/profile/edit/{profile}", [ProfileController::class, "edit"])->name("edit_profile");
+Route::put("/profile/update/{profile}", [ProfileController::class, "update"])->name("update_profile");
 
 
