@@ -98,7 +98,6 @@ button:active .icon svg {
   font-weight: 500;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px #315cfd;
   transition-duration: .3s;
 }
 
@@ -129,4 +128,10 @@ button:active .icon svg {
   transform: translate(3px , 3px);
   transition-duration: .3s;
   box-shadow: 2px 2px 0px #315cfd;
+}
+
+/* Card */
+
+.card-custom{
+  width: 500px;
 }
