@@ -19,7 +19,7 @@
                    </div>
                    <div class="mb-3">
                        <label for="password-confirmation" class="form-label"><strong>Conferma password</strong></label>
-                       <input type="password-confirmation" class="form-control" id="password-confirmation" name="password_confirmation">
+                       <input type="password" class="form-control" id="password-confirmation" name="password_confirmation">
                    </div>                  
                    <button type="submit" class="btn btn-primary">Registrati</button>
                </form>

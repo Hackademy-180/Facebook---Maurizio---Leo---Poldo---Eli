@@ -1,8 +1,6 @@
 <x-layout>
-    <main class="container d-flex justify-content-center my-3 ">
-        <section class="row flex-column">
+    <main class="container my-3 ">
             @foreach($posts as $post)
-            <section class="container">
                 <article class="row ">
                     <div class="col-12 col-md-4">
                         <p class="card-text">{{ $post->description }}</p>
@@ -13,8 +11,10 @@
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column align-items-center">
                         <x-button_leggi_commenti :post="$post" />
-                        @if(Auth::user() && Auth::user()->id == $post->user_id)
+                        @if(Auth::user())
                         <x-button_commenta :post="$post" />
+                        @endif
+                        @if(Auth::user() &&  Auth::user()->id == $post->user_id)
                         <x-button_modifica_post :post="$post" />
                         <form method="POST" action="{{route("delete_post",compact("post"))}}">
                             @csrf
@@ -22,11 +22,11 @@
                             <x-button_elimina_post :post="$post" />
                         </form>
                         @endif
-                        @endforeach
                     </div>
                     
                 </article>
-            </section>
+                @endforeach
+        
             
             <main class="container-fluid my-3">
                 
