@@ -16,14 +16,14 @@ Route::post('/post/store',[PostController::class,'store'])->name('store_post');
 Route::get("/post/show/{post}",[PostController::class,"show"])->name("show_post");
 Route::get("/post/edit/{post}",[PostController::class,"edit"])->name("edit_post");
 Route::put("/post/update/{post}",[PostController::class,"update"])->name("update_post");
-Route::delete("/post/submit/{post}",[PostController::class,"destroy"])->name("delete_post");
+Route::delete("/post/delete-post/{post}",[PostController::class,"destroy"])->name("delete_post");
 
 // rotte commenti
 Route::get("/comments/create/{post}",[CommentController::class,"create"])->name("create_comment");
 Route::post('/comments/store/{post}',[CommentController::class,'store'])->name('store_comment');
 Route::get("/comments/edit/{comment}",[CommentController::class,"edit"])->name("edit_comment");
 Route::put("/comments/update/{comment}",[CommentController::class,"update"])->name("update_comment");
-Route::delete("/comments/submit/{comment}",[CommentController::class,"destroy"])->name("delete_comment");
+Route::delete("/comments/delete-comment/{comment}",[CommentController::class,"destroy"])->name("delete_comment");
 
 
 // rotta profilo
@@ -40,3 +40,4 @@ Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])
 
 // rotta preferiti
 Route::post("post/submit/{post}",[PostController::class,"preferitePost"])->name("preferitePost");
+Route::delete("post/delete-preferitePost/{preferitePost}",[PostController::class,"deletePreferitePost"])->name("deletePreferitePost");

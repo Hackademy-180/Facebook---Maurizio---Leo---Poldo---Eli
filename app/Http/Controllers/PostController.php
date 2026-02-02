@@ -43,7 +43,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view("post.show", compact("post"));
+       $lastComment= $post->comments()->orderBy("created_at","desc")->limit(6)->get();
+        
+        return view("post.show", compact("post","lastComment"));
     }
 
     /**
@@ -84,5 +86,9 @@ class PostController extends Controller
     public function preferitePost(Post $post ){
        $post->preferiteUsers()->attach(Auth::id());
        return redirect(route("home"));
+    }
+    public function deletePreferitePost(Post $preferitePost ){
+       $preferitePost->preferiteUsers()->detach(Auth::id());
+       return redirect()->back();
     }
 }

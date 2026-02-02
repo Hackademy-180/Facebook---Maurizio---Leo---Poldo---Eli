@@ -15,7 +15,14 @@
                 <h2>Regione:</h2><p>{{$profile->region}}</p>
                 <h2>Biografia:</h2><p>{{$profile->bio}}</p>
                 @foreach ($profile->user->preferitePosts as $preferitePost)
-                    
+                    <article class="col-12">
+                        <a>{{$preferitePost->title}}</a>
+                        <form method="POST" action="{{route("deletePreferitePost",compact("preferitePost"))}}">
+                            @csrf
+                            @method("delete")
+                            <button type="submit" class="btn-danger">Elimina preferito</button>
+                        </form>
+                    </article>
                 @endforeach
             </article>
             
