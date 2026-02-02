@@ -1,15 +1,16 @@
 <x-layout>
+    <header class="header-custom text-center ">i nostri post</header>
     <main class="container my-3 ">
             @foreach($posts as $post)
-                <article class="row ">
-                    <div class="col-12 col-md-4">
+                <article class="row mt-3">
+                    <div class="col-12 col-md-4 col-custom1 ">
                         <p class="card-text">{{ $post->description }}</p>
                         <h5 class="card-title">{{ $post->title }}</h5>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <img src="{{ asset('storage/' . $post->img) }}" class="img-fluid rounded mb-2 img-custom" >
+                    <div class="col-12 col-md-4 ">
+                        <img src="{{ asset('storage/' . $post->img) }}" class="img-fluid rounded mb-2 img-custom1" >
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+                    <div class="col-12 col-md-4 d-flex flex-column align-items-center col-custom2">
                         <x-button_leggi_commenti :post="$post" />
                         @if(Auth::user())
                         <x-button_commenta :post="$post" />
@@ -46,21 +47,21 @@
                     </aside>
                     
                     <!-- FEED (CENTRATO DAVVERO) -->
-                    <section class="col-12 col-md-6 col-lg-5 offset-md-1">
-                        <div class="feed-wrapper">
+                    @foreach($posts as $post)
+                    <section class="col-12 col-md-3  offset-md-1">
+                        
                             
-                            @foreach($posts as $post)
-                            <div class="card shadow-sm mb-3">
-                                <div class="card-body post-custom">
+                            <div class="card shadow-sm mb-3 card-custom ">
+                                <div class="card-body post-custom ">
                                     <h5>{{ $post->title }}</h5>
                                     <p>{{ $post->description }}</p>
                                     <img src="{{ asset('storage/'.$post->img) }}" class="img-fluid rounded mb-2">
                                 </div>
                             </div>
-                            @endforeach
                             
-                        </div>
+                      
                     </section>
+                    @endforeach
                     
                 </div>
                 

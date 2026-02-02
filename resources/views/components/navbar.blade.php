@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-custom navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
 
     <!-- SINISTRA: Facebook + Search -->

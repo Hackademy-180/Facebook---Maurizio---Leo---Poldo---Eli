@@ -1,3 +1,20 @@
+/* welcome */
+.header-custom{
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #c41b1b;
+  width: 100%;
+  height: 40px;
+  margin-top: 70px;
+}
+.navbar-custom{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  height: 70px;
+}
+
 /* Crea post */
 .btn-custom-1{
   width: 130px;
@@ -28,7 +45,17 @@
   border-radius: 10px;
   transition-duration: .3s;
 }
-
+.col-custom1{
+  background-color:  #315cfd;
+  border-radius: 5%;
+  color: #181818; 
+}
+.col-custom2{
+  background-color:  #181818 ;
+  border-radius: 5%;
+  color: #315cfd; 
+  justify-content: center;
+}
 
 button:hover {
   background: #315cfd;
@@ -99,8 +126,8 @@ button:active .icon svg {
 }
 
 
-/* Modifica post */
-.img-custom{
+/* Modifica post in welcome */
+.img-custom1{
   width: 150px;
   height: 300px;
 }
@@ -181,7 +208,7 @@ button:active .icon svg {
 /* Card */
 
 .card-custom{
-  width: 500px;
+  width: 300px;
 }
 
 /* footer */
@@ -203,10 +230,15 @@ footer .form-control {
     min-width: 200px;
 }
 
-/* post show */
+/* post show  */
 
 .img-custom{
-  width: 1000px;
+  width: 300px;
+  height: 300;
+  align-items: center;
+}
+.h1-custom{
+  margin-top: 70px ;
 }
 
 /* edit-post */
@@ -269,6 +301,7 @@ footer .form-control {
   box-shadow: 0 0 0 #fec1958c;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  height: 50px;
 }
 
 .star-1 {
