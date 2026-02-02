@@ -5,7 +5,7 @@
     </div>
     @endif
     <main class="container">
-        <section class="row">
+        <section class="row flex-column">
             <article class="col-12">
                 <h1 class="text-center">Dettaglio Profilo</h1>
             </article>
@@ -18,8 +18,30 @@
                     
                 @endforeach
             </article>
-            <a href="{{route("edit_profile", compact("profile"))}}" class="btn btn-warning">Modifica</a>
-            <a href="/" class="btn btn-primary mt-3">Torna alla home</a>
-        </section>
-    </main>
-</x-layout>
+            
+            
+            <a class="btn btn-custom Btn" href="{{route("edit_profile",compact("profile"))}}">Modifica<svg class="svg" viewBox="0 0 512 512">
+                <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg></a>
+                
+                <div class="button_home my-3">
+                    <div class="button-wrapper-home">
+                        <div class="text_home">Home</div>
+                        <a href="/"> <span class="icon_home">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                            </svg>
+                        </span></a>
+                        
+                    </div>
+                </div>
+                
+                
+            </section>
+            
+            
+            
+            <!-- From Uiverse.io by satyamchaudharydev --> 
+            
+            
+        </main>
+    </x-layout>
