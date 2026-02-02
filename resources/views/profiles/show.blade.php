@@ -14,7 +14,9 @@
                 <h2>Cognome:</h2><p>{{$profile->surname}}</p>
                 <h2>Regione:</h2><p>{{$profile->region}}</p>
                 <h2>Biografia:</h2><p>{{$profile->bio}}</p>
-                
+                @foreach ($profile->user->preferitePosts as $preferitePost)
+                    
+                @endforeach
             </article>
             <a href="{{route("edit_profile", compact("profile"))}}" class="btn btn-warning">Modifica</a>
             <a href="/" class="btn btn-primary mt-3">Torna alla home</a>

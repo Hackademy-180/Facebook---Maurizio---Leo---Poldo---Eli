@@ -38,3 +38,5 @@ Route::put("/profile/update/{profile}", [ProfileController::class, "update"])->n
 //rotta newsletter del  footer
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
+// rotta preferiti
+Route::post("post/submit/{post}",[PostController::class,"preferitePost"])->name("preferitePost");

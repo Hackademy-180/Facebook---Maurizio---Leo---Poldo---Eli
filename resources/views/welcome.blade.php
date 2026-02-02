@@ -14,6 +14,7 @@
                         <x-button_leggi_commenti :post="$post" />
                         @if(Auth::user())
                         <x-button_commenta :post="$post" />
+                        <x-button_preferite :post="$post" />
                         @endif
                         @if(Auth::user() &&  Auth::user()->id == $post->user_id)
                         <x-button_modifica_post :post="$post" />

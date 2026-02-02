@@ -81,4 +81,8 @@ class PostController extends Controller
         $post->delete();
         return redirect(route("home"));
     }
+    public function preferitePost(Post $post ){
+       $post->preferiteUsers()->attach(Auth::id());
+       return redirect(route("home"));
+    }
 }
