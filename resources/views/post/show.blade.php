@@ -11,10 +11,18 @@
                     <p>
                         {{$comment->description}}    
                     </p>
+                    <p>
+                        {{$comment->created_at}}
+                    </p>
                 </article>
-                {{-- @if (Auth::user)
-                    
-                @endif --}}
+                @if (Auth::user()->id == $post->user_id)
+                    <a  class="btn btn-primary" href="{{route("edit_comment",compact("comment"))}}">modifica commento</a>
+                    <form method="POST" action="{{route("delete_comment",compact("comment"))}}">
+                            @csrf
+                            @method("delete")
+                            <button type="submit" class="btn-danger">Elimina commento</button>
+                    </form>
+                @endif
                 @endforeach 
             </article>
         </section>

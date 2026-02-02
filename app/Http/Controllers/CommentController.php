@@ -52,15 +52,19 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view("comments.edit",compact("comment"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comment $comment)
+    public function update(Request $request, Comment $comment )
     {
-        //
+
+       $comment->update([
+             "description"=>$request->description,
+        ]);
+          return redirect()->back();
     }
 
     /**
@@ -68,6 +72,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return redirect()->back();
     }
 }

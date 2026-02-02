@@ -16,7 +16,7 @@
                 <h2>Biografia:</h2><p>{{$profile->bio}}</p>
                 @foreach ($profile->user->preferitePosts as $preferitePost)
                     <article class="col-12">
-                        <a>{{$preferitePost->title}}</a>
+                        <a href="{{route("show_post",compact("post"))}}">{{$preferitePost->title}}</a>
                         <form method="POST" action="{{route("deletePreferitePost",compact("preferitePost"))}}">
                             @csrf
                             @method("delete")
