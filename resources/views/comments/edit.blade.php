@@ -7,14 +7,13 @@
                     <form method="POST" action="{{ route('update_comment',compact("comment")) }}" enctype="multipart/form-data">
                         @csrf
                         @method("put")
-
-
                         <div class="mb-3">
                             <label for="description" class="form-label">modifica commento</label>
-                            <textarea name="description"  id="description" rows="4" class="form-control" required >{{$comment->description}}</textarea>
-                 
+                            <textarea name="description"  id="description" rows="4" class="form-control" >{{$comment->description}}</textarea>
+                            @error('description')
+                            <div class="alert text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
-
                         <button type="submit" class="btn btn-primary btn-custom-1">Modifica</button>
                     </form>
                 </div>

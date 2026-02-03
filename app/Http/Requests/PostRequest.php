@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\commentRequest;
 use Illuminate\Foundation\Http\FormRequest;
 
-class commentRequest extends FormRequest
+class PostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,16 +22,18 @@ class commentRequest extends FormRequest
     public function rules(): array
     {
         return [
-           
+            "title"=>"required|max:20",
             "description"=>"required|max:100",
-            
+            "img"=>"required|image"
         ];
     }
     public function messages():array
     {
         return[
+            "title.required"=>"questo campo è obbligatorio",
+            "title.max"=>"massimo 10 caratteri per il titolo",
             "description.required"=>"questo campo è obbligatorio",
-            "description.max"=>"massimo 100 caratteri per il commento"
+            "description.max"=>"massimo 100 caratteri per la descrizione del post"
         ];
     }
 }

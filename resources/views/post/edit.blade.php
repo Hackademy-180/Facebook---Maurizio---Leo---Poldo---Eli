@@ -9,21 +9,23 @@
                         @method("put")
                         <div class="mb-3">
                             <label for="title" class="form-label">Nuovo titolo</label>
-                            <input type="text" name="title" id="title" value="{{$post->title}}" class="form-control"  value="" required>
+                            <input type="text" name="title" id="title" value="{{$post->title}}" class="form-control"  value="" >
+                            @error('title')
+                                <div class="alert text-danger">{{ $message }}</div>
+                                @enderror
                         </div>
-
                         <div class="mb-3">
                             <label for="description" class="form-label">nuova descrizione</label>
-                            <textarea name="description"  id="description" rows="4" class="form-control" required >{{$post->description}}</textarea>
-                 
+                            <textarea name="description"  id="description" rows="4" class="form-control"  >{{$post->description}}</textarea>
+                        @error('description')
+                            <div class="alert text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="mb-3">
                             <label for="img" class="form-label">Immagine (facoltativa)</label>
-                            <input  type="file"  name="img" id="img" class="form-control" accept="image/*">
-                  
+                            <input  type="file"  name="img" id="img" class="form-control">
                         </div>
-
                         <button type="submit" class="btn btn-primary btn-custom-1">Modifica</button>
                     </form>
                 </div>
