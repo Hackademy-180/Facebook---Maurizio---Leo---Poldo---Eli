@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\commentRequest;
 
 class CommentController extends Controller
 {
@@ -58,13 +59,13 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comment $comment )
+    public function update(commentRequest $request, Comment $comment )
     {
-
+       $post=$comment->post;
        $comment->update([
              "description"=>$request->description,
         ]);
-          return redirect()->back();
+          return redirect(route("show_post",compact("post")));
     }
 
     /**
